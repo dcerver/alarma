@@ -25,6 +25,6 @@ basic.forever(function () {
             basic.pause(100)
         }
     } else if (Alarma == 0) {
-        basic.showIcon(IconNames.No)
+        basic.showIcon(IconNames.Heart)
     }
 })

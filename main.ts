@@ -1,8 +1,11 @@
+radio.setGroup(76)
 music.setVolume(255)
 basic.forever(function () {
-    if (input.magneticForce(Dimension.Strength) > 250) {
+    if (input.magneticForce(Dimension.Strength) > 150) {
         music.stopAllSounds()
+        radio.sendNumber(0)
     } else {
+        radio.sendNumber(1)
         music.playSoundEffect(music.builtinSoundEffect(soundExpression.hello), SoundExpressionPlayMode.InBackground)
         basic.showLeds(`
             # # # # #

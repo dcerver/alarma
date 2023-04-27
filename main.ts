@@ -24,7 +24,7 @@ basic.forever(function () {
             basic.clearScreen()
             basic.pause(100)
         }
-    } else if (Alarma == 1) {
+    } else if (Alarma == 0) {
         basic.showIcon(IconNames.No)
     }
 })

@@ -1,5 +1,10 @@
 radio.onReceivedString(function (receivedString) {
     Alarma = receivedString
+})
+let Alarma = ""
+radio.setGroup(76)
+music.setVolume(31)
+basic.forever(function () {
     if (Alarma == "ON") {
         if (input.magneticForce(Dimension.Strength) > 150) {
             music.stopAllSounds()
@@ -22,6 +27,3 @@ radio.onReceivedString(function (receivedString) {
         basic.showIcon(IconNames.No)
     }
 })
-let Alarma = ""
-radio.setGroup(76)
-music.setVolume(31)

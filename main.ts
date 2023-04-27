@@ -3,7 +3,7 @@ radio.onReceivedString(function (receivedString) {
 })
 let Alarma = ""
 radio.setGroup(76)
-music.setVolume(31)
+music.setVolume(255)
 basic.forever(function () {
     if (Alarma == "ON") {
         if (input.magneticForce(Dimension.Strength) > 150) {

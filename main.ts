@@ -10,6 +10,7 @@ basic.forever(function () {
         if (input.magneticForce(Dimension.Strength) > 150) {
             music.stopAllSounds()
             radio.sendNumber(0)
+            basic.clearScreen()
         } else {
             radio.sendNumber(1)
             music.playSoundEffect(music.builtinSoundEffect(soundExpression.hello), SoundExpressionPlayMode.InBackground)

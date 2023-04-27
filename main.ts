@@ -4,6 +4,7 @@ radio.onReceivedNumber(function (receivedNumber) {
 let Alarma = 0
 radio.setGroup(76)
 music.setVolume(255)
+Alarma = 0
 basic.forever(function () {
     if (Alarma == 1) {
         if (input.magneticForce(Dimension.Strength) > 150) {

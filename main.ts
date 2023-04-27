@@ -1,11 +1,11 @@
-radio.onReceivedString(function (receivedString) {
-    Alarma = receivedString
+radio.onReceivedNumber(function (receivedNumber) {
+    Alarma = receivedNumber
 })
-let Alarma = ""
+let Alarma = 0
 radio.setGroup(76)
 music.setVolume(255)
 basic.forever(function () {
-    if (Alarma == "ON") {
+    if (Alarma == 1) {
         if (input.magneticForce(Dimension.Strength) > 150) {
             music.stopAllSounds()
             radio.sendNumber(0)
@@ -23,7 +23,7 @@ basic.forever(function () {
             basic.clearScreen()
             basic.pause(100)
         }
-    } else if (Alarma == "OFF") {
+    } else if (Alarma == 1) {
         basic.showIcon(IconNames.No)
     }
 })

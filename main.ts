@@ -1,5 +1,5 @@
 radio.setGroup(76)
-music.setVolume(255)
+music.setVolume(31)
 basic.forever(function () {
     if (input.magneticForce(Dimension.Strength) > 150) {
         music.stopAllSounds()

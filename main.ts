@@ -8,12 +8,12 @@ Alarma = 0
 basic.forever(function () {
     if (Alarma == 1) {
         if (input.magneticForce(Dimension.Strength) > 150) {
-            music.stopAllSounds()
             radio.sendNumber(0)
             basic.clearScreen()
+            music.stopAllSounds()
+            basic.pause(100)
         } else {
             radio.sendNumber(1)
-            music.playSoundEffect(music.builtinSoundEffect(soundExpression.hello), SoundExpressionPlayMode.InBackground)
             basic.showLeds(`
                 # # # # #
                 # # # # #
@@ -24,8 +24,10 @@ basic.forever(function () {
             basic.pause(100)
             basic.clearScreen()
             basic.pause(100)
+            music.playSoundEffect(music.builtinSoundEffect(soundExpression.hello), SoundExpressionPlayMode.InBackground)
         }
     } else if (Alarma == 0) {
         basic.showIcon(IconNames.No)
+        basic.pause(100)
     }
 })

@@ -11,7 +11,6 @@ basic.forever(function () {
             radio.sendNumber(0)
             basic.clearScreen()
             music.stopAllSounds()
-            basic.pause(100)
         } else {
             radio.sendNumber(1)
             basic.showLeds(`
@@ -28,6 +27,6 @@ basic.forever(function () {
         }
     } else if (Alarma == 0) {
         basic.showIcon(IconNames.No)
-        basic.pause(100)
     }
+    basic.pause(100)
 })
